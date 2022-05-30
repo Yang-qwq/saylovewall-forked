@@ -25,8 +25,8 @@ if (!isset($_SESSION['posts'])) {
     <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 </head>
 
-<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto mdui-loaded">
-    <nav class="mdui-appbar mdui-ripple mdui-hoverable">
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto mdui-loaded">
+    <div class="mdui-appbar mdui-ripple mdui-hoverable">
         <div class="mdui-toolbar">
             <a href="#" class="mdui-typo-headline">表白墙</a>
             <a href="saylove.html" class="mdui-typo-title">我要表白</a>
@@ -45,9 +45,9 @@ if (!isset($_SESSION['posts'])) {
                 <i class="mdui-icon material-icons">help</i>
             </a>
         </div>
-    </nav>
+    </div>
     <!-- 左侧抽屉 -->
-    <div class="mdui-drawer mdui-drawer-close mdui-hoverable mdui-color-white" id="sort-drawer">
+    <div class="mdui-drawer mdui-drawer-close mdui-hoverable" id="sort-drawer">
         <ul class="mdui-list">
             <h2 class="mdui-list-item mdui-ripple">
                 进行排序筛选
@@ -80,15 +80,15 @@ if (!isset($_SESSION['posts'])) {
 
     <!-- 页头的信息 -->
     <div id="Header" class="Header" data-role="header">
-        <img src="images/logo.png" class="Header-logo" width="100%" height="400px" alt="" />
-        <img src="images/title.png" class="Header-title" width="250px" alt="广西科技大学表白墙" />
+        <img src="../images/logo.png" class="Header-logo" width="100%" height="400px" alt="" />
+        <img src="../images/title.png" class="Header-title" width="250px" alt="广西科技大学表白墙" />
         <!-- <h1>科大表白墙</h1> -->
     </div>
 
     <!-- 网站主体 -->
     <div class="main-body" id="main" data-role="content">
         <!-- 这里是表白的心跳载入logo，当表白获取成功就会覆盖这里 -->
-        <img src="images/icon/heart.gif" alt="" class="loading" />
+        <img src="../images/icon/heart.gif" alt="" class="loading" />
     </div>
     <p style="text-align:center;color:#00bcd4;font-size:12px;">
         博客链接： <a href="https://pingxonline.com/">https://pingxonline.com/</a>
@@ -102,7 +102,6 @@ if (!isset($_SESSION['posts'])) {
     <div id="pages" data-role="footer" style="text-align:center;margin-bottom:56px;" page="1" mode="1" max="0">
         <div data-role="controlgroup" data-type="horizontal">
             <a href="#" id="previous" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext">上一页</a>
-            <a href="#myPanel" id="" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-notext">删除</a>
             <a href="#" id="returnTop" class="ui-btn  ui-corner-all ui-icon-carat-u ui-shadow ui-btn-icon-notext">返回顶部</a>
             <a href="#" id="next" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-r ui-btn-icon-notext">下一页</a>
         </div>

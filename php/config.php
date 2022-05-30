@@ -14,13 +14,13 @@ class config
     // 数据库链接配置
     public static $config = [
         // 数据库地址
-        "host" => '127.0.0.1',
+        "host" => '192.168.3.112',
         // 数据库用户名
-        "user" => 'root',
+        "user" => 'img_develop_saylovewall',
         // 数据库密码
-        "pass" => 'root',
+        "pass" => 'develop',
         // 对应的数据库名字
-        "db_name" => 'saylovewall'
+        "db_name" => 'img_develop_saylovewall'
     ];
 
     // 邮件发送配置
@@ -36,7 +36,7 @@ class config
         // SMTP 密码，如果是QQ邮箱申请的则填写开通SMTP服务后生成的密码
         "SMTP_PASSWORD" => "SDJKGFHSDJKGHJK",
         // 分享地址，填写到能够访问该表白墙 share.php 文件的地址
-        "SHARE_LINK" => "https://pingxonline.com/app/saylove/share.php",
+        "SHARE_LINK" => "https://localhost/app/saylove/share.php",
         // 邮件标题
         "EMAIL_TITLE" => "你被表白啦！来自广西科技大学表白墙",
         // 邮件内容，{{link}} 为表白链接的占位符，可随意更改位置，系统自动替换为表白链接。
