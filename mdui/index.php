@@ -1,5 +1,5 @@
-<!-- jquery mobile 教程：http://www.runoob.com/jquerymobile/jquerymobile-tutorial.html -->
 <!DOCTYPE html>
+<!-- jquery mobile 教程：http://www.runoob.com/jquerymobile/jquerymobile-tutorial.html -->
 <?php
 session_start();
 
@@ -25,10 +25,10 @@ if (!isset($_SESSION['posts'])) {
     <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 </head>
 
-<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto mdui-loaded">
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-loaded mdui-theme-layout-auto mdui-theme-primary-indigo mdui-theme-accent-pink">
     <div class="mdui-appbar mdui-ripple mdui-hoverable">
         <div class="mdui-toolbar">
-            <a href="#" class="mdui-typo-headline">表白墙</a>
+            <a href="index.php" class="mdui-typo-headline">表白墙</a>
             <a href="saylove.html" class="mdui-typo-title">我要表白</a>
             <div class="mdui-toolbar-spacer"></div>
             <a href="search.html" class="mdui-btn mdui-btn-icon">
@@ -47,35 +47,35 @@ if (!isset($_SESSION['posts'])) {
         </div>
     </div>
     <!-- 左侧抽屉 -->
-    <div class="mdui-drawer mdui-drawer-close mdui-hoverable" id="sort-drawer">
+    <div class="mdui-drawer mdui-drawer-close mdui-hoverable mdui-ripple" id="sort-drawer">
         <ul class="mdui-list">
-            <h2 class="mdui-list-item mdui-ripple">
+            <h2 class="mdui-list-item">
                 进行排序筛选
             </h2>
-            <hr />
-            <li class="mdui-list-item mdui-ripple">
+            <li class="mdui-divider"></li>
+            <li class="mdui-list-item">
                 <i class="mdui-icon material-icons">access_time</i>
-                <input class="mdui-list-item-content" id="new-posts" type="button" value="最新表白（默认）">
+                <div id="new-posts" class="mdui-list-item-content">最新表白（默认）</div>
             </li>
-            <li class="mdui-list-item mdui-ripple">
+            <li class="mdui-list-item">
                 <i class="mdui-icon material-icons">access_time</i>
-                <input id="old-posts" type="button" value="最早表白">
+                <div id="old-posts" class="mdui-list-item-content">最早表白</div>
             </li>
-            <li class="mdui-list-item mdui-ripple">
+            <li class="mdui-list-item">
                 <i class="mdui-icon material-icons">exposure_plus_1</i>
-                <input id="most-liked" type="button" value="点赞数最多">
+                <div id="most-liked" class="mdui-list-item-content">点赞数最多</div>
             </li>
-            <li class="mdui-list-item mdui-ripple">
+            <li class="mdui-list-item">
                 <i class="mdui-icon material-icons">exposure_neg_1</i>
-                <input id="less-liked" type="button" value="点赞数最少">
+                <div id="less-liked" class="mdui-list-item-content">点赞数最少</div>
             </li>
-            <li>
+            <li class="mdui-list-item">
                 <i class="mdui-icon material-icons">help</i>
-                <input id="random-posts" type="button" value="随机显示">
+                <div id="random-posts" class="mdui-list-item-content">随机显示</div>
             </li>
         </ul>
-        <hr />
-        <button class="mdui-btn" mdui-drawer-close>关闭</button>
+        <li class="mdui-divider"></li>
+        <button class="mdui-btn" mdui-drawer-close>关闭筛选</button>
     </div>
 
     <!-- 页头的信息 -->

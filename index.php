@@ -16,6 +16,7 @@ if ( !isset($_SESSION['posts']) ) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
     <link rel="stylesheet" href="css/homepage.css" media="screen" title="no title">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+    <script src="js/env.js"></script>
 </head>
 
 <body>

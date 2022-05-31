@@ -1,4 +1,5 @@
-const actionURL = '../php/action.php'
+const srcRoot = '../'
+const actionURL = srcRoot + 'php/action.php'
 $(document).ready(function() {
     // $("li a").removeClass('ui-btn-icon-top');
     var guess_post_id = "";
@@ -25,7 +26,7 @@ $(document).ready(function() {
 
         // 如果当前页数不为 1
         if (page - 1 > 0) {
-            $("<img>").attr('src', 'images/icon/heart.gif').addClass('loading').appendTo('#main');
+            $("<img>").attr('src', srcRoot + 'images/icon/heart.gif').addClass('loading').appendTo('#main');
             getPage(page - 1, mode);
             $("#pages").attr('page', page - 1);
             // $('body,html').animate({scrollTop:200},500);
@@ -46,7 +47,7 @@ $(document).ready(function() {
         if (page + 1 > max) {
 
         } else {
-            $("<img>").attr('src', 'images/icon/heart.gif').addClass('loading').appendTo('#main');
+            $("<img>").attr('src', srcRoot + 'images/icon/heart.gif').addClass('loading').appendTo('#main');
             getPage(page + 1, mode);
             $("#pages").attr('page', page + 1);
             // $('body,html').animate({scrollTop:200},500);
@@ -200,7 +201,7 @@ $(document).ready(function() {
         // console.log(postID);
         $("#link").html("");
         // 此行控制生成的分享链接
-        $("<a>").attr('target', '_blank').attr('href', './share.php?id=' + postID).text("戳我打开链接，复制给朋友").appendTo('#link');
+        $("<a>").attr('target', '_blank').attr('href', '../share.php?id=' + postID).text("戳我打开链接，复制给朋友").appendTo('#link');
     });
 
     $("#returnTop").click(function() {
@@ -302,7 +303,7 @@ function output(result) {
         total = val[12];
         $("<div>").addClass('post').addClass('post-' + id).appendTo('#main');
         $("<div>").addClass('post-title').addClass('post-title-' + id).appendTo('.post-' + id);
-        $("<ul>").html('<li class="' + gender + '">' + nickName + '</li><li><img src="images/icon/to.png" alt="" /></li><li class="' + itsGender + '">' + toWho + '</li>').appendTo('.post-title-' + id);
+        $("<ul>").html('<li class="' + gender + '">' + nickName + '</li><li><img src="../images/icon/to.png" alt="" /></li><li class="' + itsGender + '">' + toWho + '</li>').appendTo('.post-title-' + id);
         $("<div>").addClass('post-body').addClass('post-body-' + id).appendTo('.post-' + id);
         $("<p>").addClass('post-body-content').text(contents).appendTo('.post-body-' + id);
         $("<p>").addClass('post-body-time').text(time).appendTo('.post-body-' + id);
