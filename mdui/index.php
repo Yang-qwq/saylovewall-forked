@@ -15,7 +15,7 @@ if (!isset($_SESSION['posts'])) {
     <title>广西科技大学表白墙2016</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
-    <link rel="stylesheet" href="../css/homepage.css" media="screen" title="no title">
+    <link rel="stylesheet" href="../css/css4mdui/homepage.css" media="screen" title="no title">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -37,7 +37,6 @@ if (!isset($_SESSION['posts'])) {
             <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sort-drawer'}">
                 <i class="mdui-icon material-icons">sort</i>
             </a>
-
             <a href="javascript:location.reload();" class="mdui-btn mdui-btn-icon">
                 <i class="mdui-icon material-icons">refresh</i>
             </a>
